@@ -1,0 +1,62 @@
+package Collection;
+
+import java.util.ArrayList;
+
+public class ArrayListDemo {
+
+	public static void main(String[] args) {
+		ArrayList mylist=new ArrayList();
+		mylist.add(100);
+		mylist.add(10.5);
+		mylist.add("welcome");
+		mylist.add("A");
+		mylist.add(true);
+		mylist.add(100);
+		mylist.add(null);
+		mylist.add(null);
+		System.out.println("SIze of arraylist:"+mylist.size());
+		System.out.println(mylist);
+		mylist.remove(5);
+		System.out.println(mylist);
+		mylist.add(2,"Java");
+		System.out.println("insert element in list:"+mylist);
+		mylist.set(2, "python");
+		System.out.println("Modify element in list:"+mylist);
+		// reading all elements
+		for (Object x: mylist)
+		{
+			System.out.println(x);
+		}
+		
+		System.out.println("arraylist empty or not:"+mylist.isEmpty());
+		
+		ArrayList mylist2=new ArrayList();
+		mylist2.add("A");
+		mylist2.add("B");
+		mylist.removeAll(mylist2);
+		System.out.println(mylist);
+		mylist.clear();
+		System.out.println(mylist.isEmpty());
+	
+
+	}
+
+}
+/*output
+ SIze of arraylist:8
+[100, 10.5, welcome, A, true, 100, null, null]
+[100, 10.5, welcome, A, true, null, null]
+insert element in list:[100, 10.5, Java, welcome, A, true, null, null]
+Modify element in list:[100, 10.5, python, welcome, A, true, null, null]
+100
+10.5
+python
+welcome
+A
+true
+null
+null
+arraylist empty or not:false
+[100, 10.5, python, welcome, true, null, null]
+true
+*/
